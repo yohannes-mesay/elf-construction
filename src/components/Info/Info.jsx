@@ -1,4 +1,4 @@
-import Logo from "../../../public/assets/images/logo.jpg";
+import Logo from "../../../public/assets/images/logo.png  ";
 import Logofull from "../../../public/assets/images/logofull.png";
 import Navbar from "../Navbar/Navbar";
 function Info() {
