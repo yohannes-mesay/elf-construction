@@ -17,15 +17,11 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 200;
-const navItems = ["Home", "Discussion", "Resource", "Questions"];
 
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleLogout = () => {
-    logout();
-  };
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -37,9 +33,6 @@ function Navbar(props) {
   const profielehandler = () => {};
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
       <Divider />
       <List>
         <ListItem disablePadding>
@@ -107,7 +100,6 @@ function Navbar(props) {
           <Typography
             variant="h6"
             component="div"
-            // a light sunset orange color
             color="Black"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           ></Typography>
@@ -150,12 +142,7 @@ function Navbar(props) {
             >
               Questions
             </Button>
-            {/* <Button
-              onClick={localStorage.isLogin ? handleLogout : loginhandler}
-              className="bg-[#6528F7] w-20 h-8 rounded-md hover:text-[#6528F7] hover:bg-white hover:border-[#6528F7] "
-            >
-              {localStorage.isLogin ? "Logout" : "Login"}
-            </Button> */}
+           
             {localStorage.isLogin ? (
               <Button onClick={profielehandler} sx={{ color: "#ff" }}>
                 Profile
@@ -171,7 +158,7 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -187,12 +174,5 @@ function Navbar(props) {
     </Box>
   );
 }
-Navbar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default Navbar;
