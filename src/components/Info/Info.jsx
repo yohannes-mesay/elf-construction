@@ -1,5 +1,5 @@
-import Logo from "../../../public/assets/images/logo.png  ";
-import Logofull from "../../../public/assets/images/logofull.png";
+import LogoText from "../../../public/assets/images/logotext.png";
+import Logo from "../../../public/assets/images/logo.png"
 import Navbar from "../Navbar/Navbar";
 function Info() {
   return (
