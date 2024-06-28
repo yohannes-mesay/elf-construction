@@ -115,7 +115,7 @@ function Navbar(props) {
               sx={{
                 color: "aliceblue",
                 fontWeight: "bold",
-                letterSpacing: "0.1em",
+                letterSpacing: "0em",
               }}
             >
               Home
@@ -125,22 +125,28 @@ function Navbar(props) {
               sx={{
                 color: "aliceblue",
                 fontWeight: "bold",
-                letterSpacing: "0.1em",
+                letterSpacing: "0em",
               }}
             >
-              Discussion
+              Company
             </Button>
             <Button
               onClick={ResourcesHandler}
               sx={{ color: "aliceblue", fontWeight: "bold" }}
             >
-              Resources
+              Our Department
             </Button>
             <Button
               onClick={QuestionsHandler}
               sx={{ color: "aliceblue", fontWeight: "bold" }}
             >
-              Questions
+              Services
+            </Button>
+            <Button
+              onClick={QuestionsHandler}
+              sx={{ color: "aliceblue", fontWeight: "bold" }}
+            >
+              Contact
             </Button>
            
             {localStorage.isLogin ? (
