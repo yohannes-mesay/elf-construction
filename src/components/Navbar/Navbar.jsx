@@ -73,7 +73,7 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", backgroundColor: "white" }}>
+    <Box sx={{ display: "flex", backgroundColor: "white",position:"sticky" }}>
       <CssBaseline />
       <AppBar
         component="nav"
