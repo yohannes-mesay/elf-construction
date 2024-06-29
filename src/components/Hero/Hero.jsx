@@ -1,9 +1,9 @@
-import Carousel from "./Slider";
-
+import React from "react";
+import Slider from "./Slider";
 function Hero() {
   return (
-    <div className="max-w-full">
-      <Carousel />
+    <div>
+      <Slider />
     </div>
   );
 }

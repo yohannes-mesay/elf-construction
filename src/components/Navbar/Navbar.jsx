@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useContext } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -25,19 +24,21 @@ function Navbar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  const homehandler = () => {};
+
+  const homeHandler = () => {};
   const discussionHandler = () => {};
-  const ResourcesHandler = () => {};
-  const QuestionsHandler = () => {};
-  const loginhandler = () => {};
-  const profielehandler = () => {};
+  const resourcesHandler = () => {};
+  const questionsHandler = () => {};
+  const loginHandler = () => {};
+  const profileHandler = () => {};
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Divider />
       <List>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText primary="Home" onClick={homehandler} />
+            <ListItemText primary="Home" onClick={homeHandler} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -47,22 +48,22 @@ function Navbar(props) {
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText primary="Resources" onClick={ResourcesHandler} />
+            <ListItemText primary="Resources" onClick={resourcesHandler} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText primary="Questions" onClick={QuestionsHandler} />
+            <ListItemText primary="Questions" onClick={questionsHandler} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText onClick={loginhandler} primary="Login" />
+            <ListItemText onClick={loginHandler} primary="Login" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText onClick={profielehandler} primary="Profile" />
+            <ListItemText onClick={profileHandler} primary="Profile" />
           </ListItemButton>
         </ListItem>
       </List>
@@ -73,7 +74,16 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", backgroundColor: "white",position:"sticky" }}>
+    <Box
+      sx={{
+        display: "flex",
+        boxSizing: "border-box",
+        backgroundColor: "white",
+        position: "sticky",
+        top: "0",
+        zIndex: "10",
+      }}
+    >
       <CssBaseline />
       <AppBar
         component="nav"
@@ -82,14 +92,19 @@ function Navbar(props) {
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
+
           backgroundColor: "#343a40",
           boxShadow: "none",
-          marginTop: "10px",
         }}
       >
-        <Toolbar>
+        <Toolbar style={{
+          display: "flex",
+          position:'relative',
+          left:"0px",
+          justifyContent: "center",
+        
+        }}>
           <IconButton
-            color="Black"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -111,11 +126,15 @@ function Navbar(props) {
             }}
           >
             <Button
-              onClick={homehandler}
+              onClick={homeHandler}
               sx={{
                 color: "aliceblue",
-                fontWeight: "bold",
+                fontWeight: "10px",
                 letterSpacing: "0em",
+                "&:hover": {
+                  color: "#1c6ce4",
+                  backgroundColor: "transparent",
+                },
               }}
             >
               Home
@@ -124,33 +143,66 @@ function Navbar(props) {
               onClick={discussionHandler}
               sx={{
                 color: "aliceblue",
-                fontWeight: "bold",
+                fontWeight: "semibold",
                 letterSpacing: "0em",
+                "&:hover": {
+                  color: "#1c6ce4",
+                  backgroundColor: "transparent",
+                },
               }}
             >
               Company
             </Button>
             <Button
-              onClick={ResourcesHandler}
-              sx={{ color: "aliceblue", fontWeight: "bold" }}
+              onClick={resourcesHandler}
+              sx={{
+                color: "aliceblue",
+                fontWeight: "7px",
+                "&:hover": {
+                  color: "#1c6ce4",
+                  backgroundColor: "transparent",
+                },
+              }}
             >
               Our Department
             </Button>
             <Button
-              onClick={QuestionsHandler}
-              sx={{ color: "aliceblue", fontWeight: "bold" }}
+              onClick={questionsHandler}
+              sx={{
+                color: "aliceblue",
+                "&:hover": {
+                  color: "#1c6ce4",
+                  backgroundColor: "transparent",
+                },
+              }}
             >
               Services
             </Button>
             <Button
-              onClick={QuestionsHandler}
-              sx={{ color: "aliceblue", fontWeight: "bold" }}
+              onClick={questionsHandler}
+              sx={{
+                color: "aliceblue",
+                fontWeight: "7px",
+                "&:hover": {
+                  color: "#1c6ce4",
+                  backgroundColor: "transparent",
+                },
+              }}
             >
               Contact
             </Button>
-           
+
             {localStorage.isLogin ? (
-              <Button onClick={profielehandler} sx={{ color: "#ff" }}>
+              <Button
+                onClick={profileHandler}
+                sx={{
+                  color: "#fff",
+                  "&:hover": {
+                    color: "#1c6ce4",
+                    backgroundColor: "transparent",
+                  },
+                }}
+              >
                 Profile
               </Button>
             ) : null}
@@ -164,7 +216,7 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, 
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -180,5 +232,9 @@ function Navbar(props) {
     </Box>
   );
 }
+
+Navbar.propTypes = {
+  window: PropTypes.func,
+};
 
 export default Navbar;

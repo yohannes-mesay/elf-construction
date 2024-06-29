@@ -1,56 +1,43 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Typography, Container } from "@mui/material";
+import { Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
 import b1 from "../../../public/assets/images/slider-main/bg1.jpg";
 import b2 from "../../../public/assets/images/slider-main/bg2.jpg";
 import b3 from "../../../public/assets/images/slider-main/bg3.jpg";
 
 function Slider() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+  const paperStyle = {
+    textAlign: "center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundImage: `url(${b1})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    color: "white",
+    height: isSmallScreen ? "50vh" : isMedium ? "70vh" : "100vh",
+    width: "100%",
+    padding: isSmallScreen ? "10px" : "20px",
+  };
   return (
-    <Container
-      style={{ marginBottom: "20px" }}
-      className="slide-in-top max-w-full"
+    <Carousel
+      style={{ position: "relative" }}
+      indicators={false}
+      navButtonsAlwaysVisible={true}
+      autoPlay={true}
+      animation="slide"
+      duration={500}
     >
-      <Carousel
-        indicators={true}
-        navButtonsAlwaysVisible={true}
-        autoPlay={true}
-        animation="slide"
-        duration={500}
-      >
-        <Paper
-        className="w-full bg-slate-400"
-          style={{
-            textAlign: "center",
-            display: "flex",
-            height:"190vh",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundImage: `url(${b1})`,
-            backgroundPosition: "center",
-            color: "white",
-          }}
-        >
-          <Typography variant="h4">1</Typography>
-        </Paper>
-        <Paper
-        className="h-[200px]"
-          style={{
-            padding: "20px",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundImage: `url(${b2})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            color: "white",
-          }}
-        >
-          <Typography variant="h4">2</Typography>
-        </Paper>
-      </Carousel>
-    </Container>
+      <Paper style={paperStyle}>
+        <Typography variant={isSmallScreen ? "h6" : "h4"}>1</Typography>
+      </Paper>
+      <Paper style={paperStyle}>
+        <Typography variant={isSmallScreen ? "h6" : "h4"}>2</Typography>
+      </Paper>
+    </Carousel>
   );
 }
 
