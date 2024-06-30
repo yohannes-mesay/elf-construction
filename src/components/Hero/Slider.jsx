@@ -17,7 +17,7 @@ function Slider() {
     backgroundPosition: "center",
     backgroundSize: "cover",
     color: "white",
-    height: isSmallScreen ? "40vh" : isMedium ? "60vh" : "80vh",
+    height: isSmallScreen ? "40vh" : isMedium ? "60vh" : "100vh",
     width: "100%",
     padding: isSmallScreen ? "10px" : "20px",
   };
@@ -88,7 +88,7 @@ function Slider() {
             Meet our engineers
           </div>
 
-          <div className="text-2xl ml-auto top-0 right-0 sm:text-4xl md:text-6xl font-bold slide-in-bottom uppercase">
+          <div className="text-2xl ml-auto top-0 right-0 sm:text-4xl md:text-6xl font-extrabold slide-in-bottom uppercase">
             Precision in Every Project{" "}
           </div>
           <div className="ml-auto slide-in-fwd-cente font-[300] t puff-in-center text-xs sm:text-xl md:text-xl font-medium slide-in-bottom uppercase">

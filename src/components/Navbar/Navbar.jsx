@@ -149,7 +149,7 @@ function Navbar(props) {
                 },
               }}
             >
-              Company
+              about us
             </Button>
             <Button
               onClick={departmentHandler}
@@ -177,6 +177,7 @@ function Navbar(props) {
             >
               Services
             </Button>
+            
             <Button
               onClick={contactHandler}
               sx={{
@@ -191,20 +192,7 @@ function Navbar(props) {
               Contact
             </Button>
 
-            {localStorage.isLogin ? (
-              <Button
-                onClick={profileHandler}
-                sx={{
-                  color: "#fff",
-                  "&:hover": {
-                    color: "#1c6ce4",
-                    backgroundColor: "transparent",
-                  },
-                }}
-              >
-                Profile
-              </Button>
-            ) : null}
+            
           </Box>
         </Toolbar>
       </AppBar>

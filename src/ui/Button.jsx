@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Button({ children, disabled, to, type, onClick }) {
   const base =
-    "inline-block text-sm rounded-sm bg-[#1c6ce4] font-semibold uppercase tracking-wide text-stone-100 transition-colors duration-300 hover:bg-blue-900 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed";
+    "inline-block text-sm rounded-sm bg-[#1c6ce4] font-semibold uppercase tracking-wide text-stone-100 transition-colors duration-300 hover:bg-blue-900";
 
   const styles = {
     primary: base + " px-4 py-3 md:px-6 md:py-4 scale-90 hover:scale-95",
