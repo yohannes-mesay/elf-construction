@@ -5,7 +5,7 @@ function Button({ children, disabled, to, type, onClick }) {
     "inline-block text-sm rounded-sm bg-[#1c6ce4] font-semibold uppercase tracking-wide text-stone-100 transition-colors duration-300 hover:bg-blue-900";
 
   const styles = {
-    primary: base + " px-4 py-3 md:px-6 md:py-4 scale-90 hover:scale-95",
+    primary: base + " px-4 py-2 md:px-6 md:py-3 scale-90 hover:scale-95",
     big: base + " px-2.5 py-2 md:px-6 md:scale-110 md:py-2.5 scale-90 ",
     transparent:
       base +
