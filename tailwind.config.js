@@ -6,7 +6,12 @@ export default {
       screens: {
         tinsh: "520px",
       },
+      fontFamily: {
+        "Montserrat": ['Montserrat', 'sans-serif'],
+      },
     },
+
   },
+
   plugins: [],
 };

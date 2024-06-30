@@ -26,10 +26,10 @@ function Navbar(props) {
   };
 
   const homeHandler = () => {};
-  const discussionHandler = () => {};
-  const resourcesHandler = () => {};
-  const questionsHandler = () => {};
-  const loginHandler = () => {};
+  const companyHandler = () => {};
+  const departmentHandler = () => {};
+  const serviceHandler = () => {};
+  const contactHandler = () => {};
   const profileHandler = () => {};
 
   const drawer = (
@@ -43,27 +43,25 @@ function Navbar(props) {
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText primary="Discussion" onClick={discussionHandler} />
+            <ListItemText primary="Company" onClick={companyHandler} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText primary="Resources" onClick={resourcesHandler} />
+            <ListItemText
+              primary="Out Department"
+              onClick={departmentHandler}
+            />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText primary="Questions" onClick={questionsHandler} />
+            <ListItemText primary="Services" onClick={serviceHandler} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText onClick={loginHandler} primary="Login" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText onClick={profileHandler} primary="Profile" />
+            <ListItemText onClick={contactHandler} primary="Contact" />
           </ListItemButton>
         </ListItem>
       </List>
@@ -92,18 +90,18 @@ function Navbar(props) {
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
-
           backgroundColor: "#343a40",
           boxShadow: "none",
         }}
       >
-        <Toolbar style={{
-          display: "flex",
-          position:'relative',
-          left:"0px",
-          justifyContent: "center",
-        
-        }}>
+        <Toolbar
+          style={{
+            display: "flex",
+            position: "relative",
+            left: "0px",
+            justifyContent: "center",
+          }}
+        >
           <IconButton
             aria-label="open drawer"
             edge="start"
@@ -122,14 +120,14 @@ function Navbar(props) {
             sx={{
               display: { xs: "none", sm: "block" },
               position: "relative",
-              left: { sm: "20%", md: "50%" },
+              left: { sm: "10%", md: "40%" },
             }}
           >
             <Button
               onClick={homeHandler}
               sx={{
                 color: "aliceblue",
-                fontWeight: "10px",
+                fontWeight: "600",
                 letterSpacing: "0em",
                 "&:hover": {
                   color: "#1c6ce4",
@@ -140,10 +138,10 @@ function Navbar(props) {
               Home
             </Button>
             <Button
-              onClick={discussionHandler}
+              onClick={companyHandler}
               sx={{
                 color: "aliceblue",
-                fontWeight: "semibold",
+                fontWeight: "600",
                 letterSpacing: "0em",
                 "&:hover": {
                   color: "#1c6ce4",
@@ -154,10 +152,10 @@ function Navbar(props) {
               Company
             </Button>
             <Button
-              onClick={resourcesHandler}
+              onClick={departmentHandler}
               sx={{
                 color: "aliceblue",
-                fontWeight: "7px",
+                fontWeight: "600",
                 "&:hover": {
                   color: "#1c6ce4",
                   backgroundColor: "transparent",
@@ -167,9 +165,10 @@ function Navbar(props) {
               Our Department
             </Button>
             <Button
-              onClick={questionsHandler}
+              onClick={serviceHandler}
               sx={{
                 color: "aliceblue",
+                fontWeight: "600",
                 "&:hover": {
                   color: "#1c6ce4",
                   backgroundColor: "transparent",
@@ -179,10 +178,10 @@ function Navbar(props) {
               Services
             </Button>
             <Button
-              onClick={questionsHandler}
+              onClick={contactHandler}
               sx={{
                 color: "aliceblue",
-                fontWeight: "7px",
+                fontWeight: "600",
                 "&:hover": {
                   color: "#1c6ce4",
                   backgroundColor: "transparent",
