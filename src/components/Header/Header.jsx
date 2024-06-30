@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 function Header() {
   return (
-    <div className="flex justify-around flex-wrap m-auto gap-4 p-3 bg-gray-200">
+    <div className="flex justify-around flex-wrap m-auto gap-2 p-3 bg-gray-200">
       <div className="flex">
         <Place />
         <p className="ml-1 font-sarif">Addis Ababa, ETHIOPIA</p>
