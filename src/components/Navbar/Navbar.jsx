@@ -90,7 +90,7 @@ function Navbar(props) {
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
-          backgroundColor: "#343a40",
+          backgroundColor: "#23282d",
           boxShadow: "none",
         }}
       >

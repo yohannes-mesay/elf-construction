@@ -9,7 +9,6 @@ function Slider() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
-  const bgs = { b1, b2, b3 };
   const paperStyle = {
     textAlign: "center",
     display: "flex",
@@ -26,9 +25,16 @@ function Slider() {
     <Carousel
       style={{ position: "relative" }}
       indicators={false}
-      navButtonsAlwaysVisible={true}
-      autoPlay={false}
+      autoPlay={true}
       animation="slide"
+      fullHeightHover={true}
+      navButtonsProps={{
+        style: {
+          backgroundColor: "#1c6ce4",
+          color: "white",
+          padding: "10px",
+        },
+      }}
       duration={500}
     >
       <Paper
@@ -36,33 +42,69 @@ function Slider() {
         style={paperStyle}
       >
         <div className="absolute bottom-3=5 flex flex-col gap-5">
-          <div className="flex gap-9">
-            <div className="slide-in-left">
-              <Button to='contactus' type="big">contact us</Button>
-            </div>
-            <div className="slide-in-right">
-              <Button type="transparent">contact us</Button>
-            </div>
+          <div className="slide-in-left flex gap-9">
+            <Button to="services" type="big">
+              our service
+            </Button>
+            <Button to="contact" type="transparent">contact now</Button>
           </div>
-          <div className="text-3xl top-0 right-0 sm:text-4xl md:text-6xl relative font-extrabold slide-in-bottom uppercase">
+          <div className="text-3xl top-0 right-0 sm:text-4xl md:text-6xl relative font-extrabold slide-in-right uppercase">
             Reliable Construction Solutions
           </div>
-          <div className="puff-in-center text-2xl sm:text-3xl md:text-4xl relative font-bold slide-in-bottom uppercase">
+          <div className="slide-in-left text-2xl sm:text-3xl md:text-4xl relative font-bold slide-in-bottom uppercase">
             build the future with us
           </div>
         </div>
       </Paper>
       <Paper
-        className="bg-[url(../../../public/assets/images/slider-main/bg1.jpg)]"
+        className="bg-[url(../../../public/assets/images/slider-main/bg1.jpg)] relative"
         style={paperStyle}
       >
-        <Typography variant={isSmallScreen ? "h6" : "h4"}>1</Typography>
+        <div className="relative bottom-3=5 right-10 buttom-[-100px] flex flex-col gap-5">
+          <div className="flex gap-9">
+            <div className="relative left-0 slide-in-left px-4 py-2 md:px-6 md:scale-100 md:py-2.5 ml-28 lg:ml-0 uppercase inline-block text-sm rounded-sm bg-[#1c6ce4] font-semibold uppercase tracking-wide text-stone-100 transition-colors duration-300 hover:bg-blue-900">
+              worldclass service
+            </div>
+          </div>
+          <div className="ml-28 mb-3 md:mb-0 lg:ml-0 text-3xl top-0 right-0 sm:text-4xl md:text-6xl font-extrabold slide-in-bottom uppercase">
+            Your Vision is Our Mission
+          </div>
+          <div className="slide-in-fwd-center md:absolute mb-3 md:mb-0 ml-28 lg:ml-0  bottom-[-50px] md:left-0 puff-in-center text-2xl sm:text-3xl md:text-4xl font-medium slide-in-bottom uppercase">
+            Engineering Your Success.
+          </div>
+          <div className="slide-in-right ml-28 lg:ml-0 md:absolute bottom-[-120px] left-0">
+            <Button to="services" type="transparent">
+              our services
+            </Button>
+          </div>
+        </div>{" "}
       </Paper>
       <Paper
         className="bg-[url(../../../public/assets/images/slider-main/bg2.jpg)]"
         style={paperStyle}
       >
-        <Typography variant={isSmallScreen ? "h6" : "h4"}>2</Typography>
+        <div className="absolute right-100 flex flex-col gap-5">
+          <div className="sm:ml-auto slide-in-fwd-center puff-in-center text-xl sm:text-3xl md:text-4xl font-normal slide-in-blurred-top uppercase">
+            Meet our engineers
+          </div>
+
+          <div className="text-2xl ml-auto top-0 right-0 sm:text-4xl md:text-6xl font-bold slide-in-bottom uppercase">
+            Precision in Every Project{" "}
+          </div>
+          <div className="ml-auto slide-in-fwd-cente font-[300] t puff-in-center text-xs sm:text-xl md:text-xl font-medium slide-in-bottom uppercase">
+            Innovative Solutions for Modern Construction Challenges{" "}
+          </div>
+          <div className="slide-in-right ml-auto md:mt-5 mr-4">
+            <div className="flex gap-9">
+              <Button to="departments" type="big">
+                Our deparment
+              </Button>
+              <Button to="about" type="transparent">
+                learn more
+              </Button>
+            </div>
+          </div>
+        </div>{" "}
       </Paper>
     </Carousel>
   );

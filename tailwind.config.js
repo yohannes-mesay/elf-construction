@@ -7,11 +7,10 @@ export default {
         tinsh: "520px",
       },
       fontFamily: {
-        "Montserrat": ['Montserrat', 'sans-serif'],
+        sans: "Kanit, sans-serif",
       },
     },
-
   },
 
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 };
