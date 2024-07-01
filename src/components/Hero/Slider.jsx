@@ -9,18 +9,6 @@ function Slider() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
-  const paperStyle = {
-    textAlign: "center",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    color: "white",
-    height: isSmallScreen ? "40vh" : isMedium ? "60vh" : "100vh",
-    width: "100%",
-    padding: isSmallScreen ? "10px" : "20px",
-  };
   return (
     <Carousel
       style={{ position: "relative" }}
@@ -38,15 +26,29 @@ function Slider() {
       duration={500}
     >
       <Paper
-        className="bg-[url(../../../public/assets/images/bg6.jpg)] relative"
-        style={paperStyle}
+        style={{
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          position: "relative",
+          justifyContent: "center",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundImage: `url(${b3})`,
+          color: "white",
+          height: isSmallScreen ? "40vh" : isMedium ? "60vh" : "100vh",
+          width: "100%",
+          padding: isSmallScreen ? "10px" : "20px",
+        }}
       >
         <div className="absolute bottom-3=5 flex flex-col gap-5">
           <div className="slide-in-left flex gap-9">
             <Button to="services" type="big">
               our service
             </Button>
-            <Button to="contact" type="transparent">contact now</Button>
+            <Button to="contact" type="transparent">
+              contact now
+            </Button>
           </div>
           <div className="text-3xl top-0 right-0 sm:text-4xl md:text-6xl relative font-extrabold slide-in-right uppercase">
             Reliable Construction Solutions
@@ -57,8 +59,20 @@ function Slider() {
         </div>
       </Paper>
       <Paper
-        className="bg-[url(../../../public/assets/images/bg1.jpg)] relative"
-        style={paperStyle}
+        style={{
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          position: "relative",
+          justifyContent: "center",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundImage: `url(${b1})`,
+          color: "white",
+          height: isSmallScreen ? "40vh" : isMedium ? "60vh" : "100vh",
+          width: "100%",
+          padding: isSmallScreen ? "10px" : "20px",
+        }}
       >
         <div className="relative bottom-3=5 right-10 buttom-[-100px] flex flex-col gap-5">
           <div className="flex gap-9">
@@ -80,8 +94,20 @@ function Slider() {
         </div>{" "}
       </Paper>
       <Paper
-        className="bg-[url(../../../public/assets/images/bg2.jpg)]"
-        style={paperStyle}
+        style={{
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          position: "relative",
+          justifyContent: "center",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundImage: `url(${b2})`,
+          color: "white",
+          height: isSmallScreen ? "40vh" : isMedium ? "60vh" : "100vh",
+          width: "100%",
+          padding: isSmallScreen ? "10px" : "20px",
+        }}
       >
         <div className="absolute right-100 flex flex-col gap-5">
           <div className="sm:ml-auto slide-in-fwd-center puff-in-center text-xl sm:text-3xl md:text-4xl font-normal slide-in-blurred-top uppercase">
