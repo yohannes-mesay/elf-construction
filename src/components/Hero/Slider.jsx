@@ -1,9 +1,9 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
-import b1 from "../../../public/assets/images/slider-main/bg1.jpg";
-import b2 from "../../../public/assets/images/slider-main/bg2.jpg";
-import b3 from "../../../public/assets/images/slider-main/bg6.jpg";
+import b1 from "../../../public/assets/images/bg1.jpg";
+import b2 from "../../../public/assets/images/bg2.jpg";
+import b3 from "../../../public/assets/images/bg6.jpg";
 import Button from "../../ui/Button";
 function Slider() {
   const theme = useTheme();
@@ -38,7 +38,7 @@ function Slider() {
       duration={500}
     >
       <Paper
-        className="bg-[url(../../../public/assets/images/slider-main/bg6.jpg)] relative"
+        className="bg-[url(../../../public/assets/images/bg6.jpg)] relative"
         style={paperStyle}
       >
         <div className="absolute bottom-3=5 flex flex-col gap-5">
@@ -57,7 +57,7 @@ function Slider() {
         </div>
       </Paper>
       <Paper
-        className="bg-[url(../../../public/assets/images/slider-main/bg1.jpg)] relative"
+        className="bg-[url(../../../public/assets/images/bg1.jpg)] relative"
         style={paperStyle}
       >
         <div className="relative bottom-3=5 right-10 buttom-[-100px] flex flex-col gap-5">
@@ -80,7 +80,7 @@ function Slider() {
         </div>{" "}
       </Paper>
       <Paper
-        className="bg-[url(../../../public/assets/images/slider-main/bg2.jpg)]"
+        className="bg-[url(../../../public/assets/images/bg2.jpg)]"
         style={paperStyle}
       >
         <div className="absolute right-100 flex flex-col gap-5">
