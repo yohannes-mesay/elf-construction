@@ -1,6 +1,7 @@
 import {
   AccessAlarm,
   Facebook,
+  Instagram,
   LocationCity,
   Place,
   Telegram,
@@ -12,14 +13,7 @@ import {
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { SvgIcon } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import {
-  Instagram,
-  LucideFacebook,
-  LucideScanFace,
-  Send,
-  TwitterIcon,
-  Youtube,
-} from "lucide-react";
+
 function Header() {
   return (
     <div className="flex justify-around flex-wrap m-auto gap-2 p-3 bg-gray-200">
@@ -28,8 +22,9 @@ function Header() {
         <p className="ml-1 font-sarif">Addis Ababa, ETHIOPIA</p>
       </div>
       <div className="flex gap-4 flex-wrap">
-        <LucideFacebook size="18" fill="black" strokeWidth={0.2} />
-        <Instagram size="18" />
+        <Facebook fontSize="small" />
+        
+        <Instagram fontSize="small" />
         <YouTube fontSize="small" />
         <Telegram fontSize="small" />
       </div>
