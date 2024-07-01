@@ -4,6 +4,7 @@ import Slider from "../components/Hero/Slider";
 import Info from "../components/Info/Info";
 import Values from "../components/Info/Values";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../ui/Footer";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Navbar />
       <Hero />
       <Values />
+      <Footer />
     </div>
   );
 }

@@ -11,16 +11,17 @@ body {
   padding: 0;
 }
 .MuiExpansionPanelSummary-expandIcon.Mui-expanded {
-    transform: 1s;
- }
+  transform: 1s;
+}
+
 .custom-nav-buttons {
   padding-top: 100px;
   background-color: "#1c6ce4";
   color: "white";
   padding: "10px";
 }
-.css-i4bv87-MuiSvgIcon-root {
-  padding:"2px";
+.customex {
+  padding: "2px";
   color: white;
   background-color: #1c6ce4;
 }

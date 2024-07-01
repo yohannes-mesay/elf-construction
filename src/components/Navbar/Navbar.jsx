@@ -79,7 +79,7 @@ function Navbar(props) {
         backgroundColor: "white",
         position: "sticky",
         top: "0",
-        zIndex: "10",
+        zIndex: "15",
       }}
     >
       <CssBaseline />
@@ -177,7 +177,7 @@ function Navbar(props) {
             >
               Services
             </Button>
-            
+
             <Button
               onClick={contactHandler}
               sx={{
@@ -191,8 +191,6 @@ function Navbar(props) {
             >
               Contact
             </Button>
-
-            
           </Box>
         </Toolbar>
       </AppBar>

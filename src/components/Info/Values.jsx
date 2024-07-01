@@ -1,12 +1,16 @@
-import * as React from "react";
 import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from "@mui/material/Button";
+import { useState } from "react";
 
 function Values() {
+  const [expanded, setExpanded] = useState("panel1");
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <div className="flex justify-center gap-36 flex-wrap mt-5 sm:mt-20">
       <div>
@@ -20,9 +24,12 @@ function Values() {
         <p className="uppercase font-thin sm:text-xl text-sm">our values</p>
         <div className="w-[30rem]">
           <Accordion
+
+            expanded={expanded === "panel1"}
+            onChange={handleChange("panel1")}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className="customex" />}
               aria-controls="panel1-content"
               id="panel1-header"
               sx={{
@@ -41,9 +48,12 @@ function Values() {
               meeting the highest industry standards.
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion
+            expanded={expanded === "panel2"}
+            onChange={handleChange("panel2")}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className="customex" />}
               aria-controls="panel2-content"
               id="panel2-header"
               sx={{
@@ -53,18 +63,21 @@ function Values() {
                 fontSize: "normal",
               }}
             >
-              performance
+              Performance
             </AccordionSummary>
             <AccordionDetails className="text-sm font-[kanit]">
               We strive for excellence in every aspect of our work, from project
               planning to execution. Our team’s relentless pursuit of efficiency
               and innovation guarantees optimal performance, delivering
-              exceptional outcomes for our clients
+              exceptional outcomes for our clients.
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion
+            expanded={expanded === "panel3"}
+            onChange={handleChange("panel3")}
+          >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className="customex" />}
               aria-controls="panel3-content"
               id="panel3-header"
               sx={{
@@ -74,7 +87,7 @@ function Values() {
                 fontSize: "normal",
               }}
             >
-              COMMITMENT
+              Commitment
             </AccordionSummary>
             <AccordionDetails className="text-sm font-[kanit]">
               Our commitment is the foundation of everything we do. We pledge to
