@@ -23,7 +23,7 @@ function Recent() {
   return (
     <div className="flex flex-col gap-3 items-center mt-10">
       <p className="uppercase">work of excellence</p>
-      <p className="uppercase font-bold text-2xl">recent projects</p>
+      <p className="uppercase font-[800] text-3xl">recent projects</p>
       <hr className="w-[60vw] self-center h-0.5 rounded-full bg-[#1c6ce4]" />
       <div className="md:grid grid-cols-3 w-[60vw]">
         <div className="relative group overflow-hidden">
@@ -88,12 +88,12 @@ function Recent() {
             </div>
           </div>
         </span>
-        <span className="flex flex-col">
+        <span className="flex flex-col flex-wrap">
         <div className="relative group overflow-hidden">
             <img
               src={images[4].src}
               className="overflow-hidden transition duration-300 ease-in-out group-hover:scale-105 w-full h-full object-cover"
-              alt={images[4].title}
+              alt={images   [4].title}
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-xl font-[kanit] tracking-wider uppercase hover:text-[#1c6ce4] font-semibold">
