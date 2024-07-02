@@ -14,6 +14,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { NavLink } from "react-router-dom";
 
 const drawerWidth = 200;
 
@@ -135,7 +136,7 @@ function Navbar(props) {
                 },
               }}
             >
-              Home
+              <NavLink to="/">Home</NavLink>
             </Button>
             <Button
               onClick={companyHandler}
@@ -149,7 +150,7 @@ function Navbar(props) {
                 },
               }}
             >
-              about us
+              <NavLink to="/about">about us</NavLink>
             </Button>
             <Button
               onClick={departmentHandler}
@@ -162,7 +163,7 @@ function Navbar(props) {
                 },
               }}
             >
-              Our Department
+              <NavLink to="department">Our Department</NavLink>
             </Button>
             <Button
               onClick={serviceHandler}
@@ -175,7 +176,7 @@ function Navbar(props) {
                 },
               }}
             >
-              Services
+              <NavLink to="services">services </NavLink>
             </Button>
 
             <Button
@@ -189,7 +190,7 @@ function Navbar(props) {
                 },
               }}
             >
-              Contact
+              <NavLink to="contact">contact </NavLink>
             </Button>
           </Box>
         </Toolbar>

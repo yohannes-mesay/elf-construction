@@ -18,7 +18,7 @@ function Info() {
           </p>
         </div>
         <div className="relative ml-6">
-          <Button type="primary">Contact Us</Button>
+          <Button type="primary" to="contact">Contact Us</Button>
         </div>
       </div>
     </div>
