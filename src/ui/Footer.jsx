@@ -70,7 +70,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="py-10 text-slate-100 text-xs flex items-center justify-center bg-[#1c6ce4]">Copyright © 2024, Developed by&nbsp; <a href="https://github.com/yohannes-mesay" target="_blank" className="font-[italic]" > @yohannes</a> </div>
+      <div className="py-10 text-slate-100 text-xs flex items-center justify-center bg-[#1c6ce4]">Copyright © 2024, Developed by <a href="https://github.com/yohannes-mesay" target="_blank" className="font-[italic]" >&nbsp;@yohannes</a> </div>
     </div>
   );
 }
