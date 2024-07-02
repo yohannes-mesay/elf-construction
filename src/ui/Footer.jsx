@@ -53,6 +53,7 @@ function Footer() {
               <div className="hover:text-[#5288da]">
                 <KeyboardArrowRightIcon fontSize="small" />
                 structural/skeleton
+                
               </div>
               <div className="hover:text-[#5288da]">
                 <KeyboardArrowRightIcon fontSize="small" />
